@@ -8,6 +8,6 @@ app = Flask(__name__)
 def hello():
     return 'Hello, World! This is a simple web server.'
 
-# 웹 서버를 실행합니다.
+# 웹 서버를 실행합니다. 호스트를 0.0.0.0으로 설정하여 외부에서 접속할 수 있도록 합니다.
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
